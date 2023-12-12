@@ -1,10 +1,15 @@
 .app {
     width: 100%;
-    min-height: 100vh;
+    min-height: 1000vh;
     background-color: #f1f2f4;
 }
 
 .header {
+    position: sticky;
+    left: 0;
+    top: 0;
+    right: 0;
+    z-index: 100;
     background-color: #ffffff;
     display: flex;
     justify-content: center;
@@ -82,4 +87,57 @@
 
 .main_slider {
     margin: 20px 0;
+}
+
+.drop_down {
+    min-width: 300px;
+    position: absolute;
+    top: 65px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(000, 000, 000, 0.3); 
+    border-radius: 10px;
+    padding: 15px 12px;
+}
+
+.drop_down .sign_up {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #cfcfcf;
+}
+
+.drop_down .sign_up h3 {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #333;
+}
+
+.drop_down .sign_up p {
+    color: #2a55e5;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.drop_down .drop_down_options .option_item {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 10px 5px;
+    cursor: pointer;
+}
+
+.drop_down .drop_down_options .option_item:hover {
+    background-color: #f1f2f4;
+}
+
+.drop_down .drop_down_options .option_item img {
+    width: 20px;
+    height: 20px;
+}
+
+.drop_down .drop_down_options .option_item p {
+    font-size: 14px;
 }
