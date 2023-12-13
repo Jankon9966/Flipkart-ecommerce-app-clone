@@ -1,8 +1,5 @@
 import React from "react";
-import profileIcon from "../../../assets/dropdown_profile.svg"
-import ordersIcon from "../../../assets/dropdown_orders.svg"
-import wishIcon from "../../../assets/dropdown_wishlist.svg"
-import rewardsIcon from "../../../assets/dropdown_rewards.svg"
+import { profileIcon, ordersIcon, wishIcon, rewardsIcon } from "./index";
 
 const DropDown = () => {
   return (

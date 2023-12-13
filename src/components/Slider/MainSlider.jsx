@@ -21,19 +21,19 @@ const MainSlider = () => {
         slidesToScroll={1}
       >
         <div className="slider_item">
-          <img src={imageSliderFirst} />
+          <img src={imageSliderFirst} alt="slider image" />
         </div>
         <div className="slider_item">
-          <img src={imageSliderSecond} />
+          <img src={imageSliderSecond} alt="slider image" />
         </div>
         <div className="slider_item">
-          <img src={imageSliderThrid} />
+          <img src={imageSliderThrid} alt="slider image" />
         </div>
         <div className="slider_item">
-          <img src={imageSliderFourth} />
+          <img src={imageSliderFourth} alt="slider image" />
         </div>
         <div className="slider_item">
-          <img src={imageSliderFive} />
+          <img src={imageSliderFive} alt="slider image" />
         </div>
       </Slider>
     </div>
