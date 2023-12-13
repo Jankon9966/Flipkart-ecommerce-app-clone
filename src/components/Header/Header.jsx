@@ -4,11 +4,14 @@ import storeIcon from "../../assets/store_icon.svg";
 import Search from "./Search/Search";
 import Login from "./Login/Login";
 import Cart from "./Cart/Cart";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
     <div className="header">
-      <img src={logo} alt="Header banner" />
+      <Link to="/">
+        <img src={logo} alt="Header banner" />
+      </Link>
       <Search />
       <Login />
       <Cart />

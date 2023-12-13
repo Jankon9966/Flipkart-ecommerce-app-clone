@@ -20,7 +20,6 @@ const Search = () => {
         options
       );
       const data = response.data.products;
-      console.log(data);
       const newData = data.map((product) => {
         return {
           product_title: product.product_title,
