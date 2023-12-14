@@ -72,7 +72,15 @@
 
 .main_content {
     max-width: 1540px;
-    margin: 10px auto;
+    margin:8px auto;
+}
+
+.main_content .banks {
+    margin: 45px 0 15px 0;
+}
+
+.main_content .banks img {
+    width: 100%;
 }
 
 .sub_header_container {
