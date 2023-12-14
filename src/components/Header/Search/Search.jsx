@@ -31,6 +31,7 @@ const Search = () => {
       })
       console.log(newData);
       setProducts(newData);
+      setSearch("");
     }
   };
 

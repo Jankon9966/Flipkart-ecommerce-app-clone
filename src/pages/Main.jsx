@@ -1,17 +1,16 @@
 import React, { useEffect, useState } from "react";
-import { options, fetchData } from "../utils/api";
 import SubHeader from "../components/SubHeader/SubHeader";
 import Slider from "../components/Slider/MainSlider";
+import Products from "../components/Products/Products";
 
 const Main = () => {
-
   return (
     <div>
       <div className="main_content">
         <SubHeader />
         <Slider />
-        <div>
-          <h2>products</h2>
+        <div className="products">
+          <Products />
         </div>
       </div>
     </div>
