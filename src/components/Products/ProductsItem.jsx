@@ -5,12 +5,11 @@ const ProductsItem = (props) => {
     <div className="products_container">
       <h3 className="title">{props.title}</h3>
       <img src={props.image} alt={props.title} />
-      <span>{props.category}</span>
-      <h4>{props.price}</h4>
-      <div className="ratings">
-        <span>{props.rating.count}</span>
-        <span>{props.rating.rate}</span>
-      </div>
+      <span className="category">{props.category}</span>
+      <h4>
+        Price: <span>${props.price}</span>
+      </h4>
+      <button>Buy Now</button>
     </div>
   );
 };
