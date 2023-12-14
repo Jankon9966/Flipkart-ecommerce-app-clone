@@ -1,6 +1,6 @@
 .app {
     width: 100%;
-    min-height: 1000vh;
+    min-height: 100vh;
     background-color: #f1f2f4;
 }
 
@@ -72,7 +72,8 @@
 
 .main_content {
     max-width: 1540px;
-    margin:8px auto;
+    margin: 0 auto;
+    margin-top: 8px;
 }
 
 .main_content .banks {
@@ -224,7 +225,6 @@
     font-weight: 500;
 }
 
-
 .products_container button {
     padding: 10px 16px;
     color: white;
@@ -235,4 +235,55 @@
     font-weight: 500;
     cursor: pointer;
     font-size: 14px;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.6rem;
+    margin: 15px 0;
+}
+
+.footer {
+    width: 100%;
+    padding: 40px 70px 20px 70px;
+    background-color: #212121;
+    color: #ffffff;
+}
+
+.footer .footer_flex {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 50px;
+    padding-bottom: 50px;
+}
+
+.footer .footer_flex .footer_categories {
+    margin-right: 40px;
+}
+
+.footer .footer_flex .footer_categories h3 {
+    font-size: 0.9rem;
+    font-weight: 300;
+    padding-bottom: 20px;
+}
+
+.footer .footer_flex .footer_categories div {
+    font-size: 12px;
+}
+
+.footer .footer_bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.295);
+    padding-top: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer .footer_bottom img {
+    height: 20px;
 }
