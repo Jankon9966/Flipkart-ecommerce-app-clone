@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const ProductsItem = (props) => {
   return (
@@ -9,7 +10,9 @@ const ProductsItem = (props) => {
       <h4>
         Price: <span>${props.price}</span>
       </h4>
-      <button>Buy Now</button>
+      <Link to="single-product">
+        <button>Buy Now</button>
+      </Link>
     </div>
   );
 };

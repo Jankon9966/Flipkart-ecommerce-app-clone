@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { CartItem } from "./CartItem";
 
 const CartContent = () => {
@@ -7,13 +7,10 @@ const CartContent = () => {
       <h1>Your Shopping Cart</h1>
       <div className="cart">
         <div className="cart_item_container">
-          <CartItem />
-          <CartItem />
-          <CartItem />
-          <CartItem />
+          <h2 className="empty">Your Flipkart Cart is empty</h2>
         </div>
         <div className="cart_items_sub_total">
-          <h3>Subtotal: $1100</h3>
+          <h3>Subtotal: $0</h3>
         </div>
       </div>
     </div>
