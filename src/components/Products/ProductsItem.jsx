@@ -11,7 +11,7 @@ const ProductsItem = (props) => {
         Price: <span>${props.price}</span>
       </h4>
       <Link to="single-product">
-        <button>Buy Now</button>
+        <button>See More</button>
       </Link>
     </div>
   );
