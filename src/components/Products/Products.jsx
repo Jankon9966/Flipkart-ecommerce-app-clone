@@ -1,26 +1,25 @@
-import axios from "axios";
 import React, { useEffect, useState } from "react";
+import { fetchProducts } from "../../utils/api";
 import ProductsItem from "./ProductsItem";
 
 const Products = () => {
+  
   const [products, setProducts] = useState([]);
 
   const getProducts = async () => {
     try {
-      const response = await axios.get("https://fakestoreapi.com/products");
-      const data = response.data;
-      const newData = data.map((item) => {
+      const response = await fetchProducts();
+      const data = response.products;
+      const newData = data.map((product) => {
         return {
-          id: item.id,
-          title: item.title,
-          category: item.category,
-          price: item.price,
-          image: item.image,
-          rating: item.rating,
-          description: item.description,
+          id: product.id,
+          title: product.title,
+          image: product.images[0],
+          price: product.price,
+          brand: product.brand,
+          category: product.category,
         };
       });
-      console.log(newData);
       setProducts(newData);
     } catch (error) {
       console.log(error);
@@ -40,11 +39,10 @@ const Products = () => {
             <ProductsItem
               key={product.id}
               title={product.title}
-              category={product.category}
-              price={product.price}
+              brand={product.brand}
               image={product.image}
-              rating={product.rating}
-              description={product.description}
+              price={product.price}
+              category={product.category}
             />
           );
         })}

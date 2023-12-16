@@ -199,8 +199,10 @@
 }
 
 .products_container img {
-    width: 200px;
-    height: 200px;
+    width: 230px;
+    height: 230px;
+    object-fit: contain;
+    object-position: center;
 }
 
 .products_container .title {
