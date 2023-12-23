@@ -1,11 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import searchIcon from "../../../assets/search_icon.svg.png";
 import { searchProducts } from "../../../utils/api";
 
 const Search = () => {
 
   const [search, setSearch] = useState("");
-  const [products, setProducts] = useState([]);
 
   const onChangeHandler = (event) => {
     setSearch(event.target.value.toLowerCase());
@@ -18,19 +17,10 @@ const Search = () => {
       const searchDataProducts = async () => {
         try {
           const response = await searchProducts(search);
-          const searchedProducts = response.map((item) => {
-            return {
-              id: item.id,
-              title: item.title,
-              image: item.images[0],
-              brand: item.brand,
-              price: item.price,
-              category: item.category,
-              
-            }
+          const searched = response.filter((item) => {
+            return item && item.title.toLowerCase().includes(search.toLowerCase());
           })
-          console.log(searchedProducts);
-          setProducts(searchedProducts);
+          console.log(searched);
         } catch (error) {
           console.log(error);
         }
