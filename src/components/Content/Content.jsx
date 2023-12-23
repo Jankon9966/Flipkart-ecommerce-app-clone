@@ -4,7 +4,7 @@ import Main from "../../pages/Main";
 import { Routes, Route } from "react-router";
 import CartContent from "../Header/Cart/CartContent";
 import Footer from "../Footer/Footer";
-import SingleProduct from "../Products/SingleProduct";
+import SearchProduct from "../Products/SearchProduct";
 
 const Content = () => {
   return (
@@ -13,8 +13,8 @@ const Content = () => {
       <Routes>
         <Route path="/" element={<Main />} />
         <Route path="/cart" element={<CartContent />} />
-        <Route path="/single-product" element={<SingleProduct />}>
-          <Route path=":productId" element={<SingleProduct />} />
+        <Route path="/single-product" element={<SearchProduct />}>
+          <Route path=":productId" element={<SearchProduct />} />
         </Route>
       </Routes>
       <Footer />
