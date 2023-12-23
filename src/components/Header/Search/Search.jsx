@@ -19,6 +19,7 @@ const Search = () => {
           const response = await searchProducts(search);
           const searched = response.filter((item) => {
             return item && item.title.toLowerCase().includes(search.toLowerCase());
+            
           })
           console.log(searched);
         } catch (error) {
