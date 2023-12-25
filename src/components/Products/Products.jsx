@@ -1,48 +1,37 @@
-import React, { useEffect, useState } from "react";
-import { fetchProducts } from "../../utils/api";
+import React, { useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { fetchProducts } from "../../redux/product-slice";
+import { Link } from "react-router-dom";
 import ProductsItem from "./ProductsItem";
 
 const Products = () => {
-  
-  const [products, setProducts] = useState([]);
-
-  const getProducts = async () => {
-    try {
-      const response = await fetchProducts();
-      const data = response.products;
-      const newData = data.map((product) => {
-        return {
-          id: product.id,
-          title: product.title,
-          image: product.images[0],
-          price: product.price,
-          brand: product.brand,
-          category: product.category,
-        };
-      });
-      setProducts(newData);
-    } catch (error) {
-      console.log(error);
-    }
-  };
+  const dispatch = useDispatch();
+  const products = useSelector((state) => state.product.products);
+  const loadingProducts = useSelector(
+    (state) => state.product.isLoadingProducts
+  );
 
   useEffect(() => {
-    getProducts();
+    dispatch(fetchProducts());
   }, []);
+
+  if (loadingProducts) {
+    return <h1>Loading products...</h1>;
+  }
 
   return (
     <div>
       <h2 className="products_heading">Popular Products</h2>
       <div className="products_flex">
-        {products.map((product) => {
+        {products.map((item) => {
           return (
             <ProductsItem
-              key={product.id}
-              title={product.title}
-              brand={product.brand}
-              image={product.image}
-              price={product.price}
-              category={product.category}
+              key={item.id}
+              title={item.title}
+              image={item.images[0]}
+              brand={item.brand}
+              price={item.price}
+              category={item.category}
             />
           );
         })}
