@@ -1,12 +1,12 @@
 import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { fetchProducts } from "../../redux/product-slice";
-import { Link } from "react-router-dom";
 import ProductsItem from "./ProductsItem";
 
 const Products = () => {
   const dispatch = useDispatch();
   const products = useSelector((state) => state.product.products);
+  console.log(products)
   const loadingProducts = useSelector(
     (state) => state.product.isLoadingProducts
   );

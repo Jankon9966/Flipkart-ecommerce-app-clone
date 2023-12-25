@@ -3,10 +3,10 @@ import axios from "axios";
 import { API_URL } from "./config";
 
 
-export const fetchProducts = async () => {
+export const fetchProductsData = async () => {
   try {
     const response = await axios.get(`${API_URL}/products`);
-    return response.data;
+    return response.data.products;
   } catch (error) {
     console.log(error);
   }
